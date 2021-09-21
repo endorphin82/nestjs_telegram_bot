@@ -11,12 +11,12 @@ import {
 export class BotService {
   @Start()
   async start(@Ctx() ctx) {
-    await ctx.reply('Welcome');
+    await ctx.reply('Welcome, i m-integration bot, please press /help to help');
   }
 
   @Help()
   async help(@Ctx() ctx) {
-    await ctx.reply('Send me a sticker');
+    await ctx.reply('Send me a sticker или скажи hi');
   }
 
   @On('sticker')
