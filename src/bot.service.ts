@@ -11,7 +11,7 @@ import {
 export class BotService {
   @Start()
   async start(@Ctx() ctx) {
-    await ctx.reply('Welcome');
+    await ctx.reply('Welcome, i m-integration bot, please press /help to help');
   }
 
   @Help()
