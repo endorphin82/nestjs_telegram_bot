@@ -7,27 +7,25 @@ import {
   Hears
 } from "nestjs-telegraf";
 
-// import { TelegrafContext } from './common/interfaces/telegraf-context.interface.ts';
-
 @Update()
-export class AppUpdate {
+export class BotService {
   @Start()
   async start(@Ctx() ctx) {
-    await ctx.reply("Welcome");
+    await ctx.reply('Welcome');
   }
 
   @Help()
   async help(@Ctx() ctx) {
-    await ctx.reply("Send me a sticker");
+    await ctx.reply('Send me a sticker');
   }
 
-  @On("sticker")
+  @On('sticker')
   async on(@Ctx() ctx) {
-    await ctx.reply("👍");
+    await ctx.reply('👍');
   }
 
-  @Hears("hi")
+  @Hears('hi')
   async hears(@Ctx() ctx) {
-    await ctx.reply("Hey there");
+    await ctx.reply('Hey there');
   }
 }
