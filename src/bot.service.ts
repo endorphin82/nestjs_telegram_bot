@@ -16,7 +16,7 @@ export class BotService {
 
   @Help()
   async help(@Ctx() ctx) {
-    await ctx.reply('Send me a sticker или скажи /hi');
+    await ctx.reply('Send me a sticker или скажи hi');
   }
 
   @On('sticker')
