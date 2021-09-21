@@ -1,0 +1,8 @@
+version: '3.7'
+
+services:
+  nestjs_telegram_bot:
+    container_name: nestjs_telegram_bot
+    #      image: img/nestjs_telegram_bot
+    build:
+      context: .
