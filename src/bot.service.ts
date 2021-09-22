@@ -14,7 +14,7 @@ export class BotService {
     console.log(ctx);
     // await ctx.reply('Welcome, i m-integration bot, please press /help to help');
     await ctx.reply(
-      `Welcome, i m-integration bot, please press /help to help`,
+      `Welcome, please press /help to help`,
       { parse_mode: "Html" }
     );
   }
