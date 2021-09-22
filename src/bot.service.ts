@@ -12,6 +12,7 @@ export class BotService {
   @Start()
   async start(@Ctx() ctx) {
     console.log(ctx);
+    console.log(ctx.from.id, ctx.from.first_name, ctx.from.username);
     // await ctx.reply('Welcome, i m-integration bot, please press /help to help');
     await ctx.reply(
       `Welcome, please press /help to help`,
@@ -22,6 +23,7 @@ export class BotService {
   @Help()
   async help(@Ctx() ctx) {
     console.log(ctx);
+    console.log(ctx.from.id, ctx.from.first_name, ctx.from.username);
     await ctx.reply("Send me a sticker или скажи hi, нажми /id что бы узнать свой ID");
   }
 
@@ -31,12 +33,14 @@ export class BotService {
   ])
   async on(@Ctx() ctx) {
     console.log(ctx);
+    console.log(ctx.from.id, ctx.from.first_name, ctx.from.username);
     await ctx.reply('👍');
   }
 
   @Hears(['hi', '/id', 'Id'])
   async hears(@Ctx() ctx) {
     console.log(ctx.from);
+    console.log(ctx.from.id, ctx.from.first_name, ctx.from.username);
     if (ctx.match[0] == 'hi') {
       await ctx.reply('Hey there');
     }
